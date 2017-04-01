@@ -356,7 +356,7 @@ class NestedInline(InlineModelAdmin):
     @property
     def media(self):
         extra = '' if settings.DEBUG else '.min'
-        js = ['jquery%s.js' % extra, 'jquery.init.js', 'inlines-nested%s.js' % extra]
+        js = ['inlines-nested%s.js' % extra]
         if self.prepopulated_fields:
             js.extend(['urlify.js', 'prepopulate%s.js' % extra])
         if self.filter_vertical or self.filter_horizontal:
